@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Bell Forklift | Michigan Moves on Bell</title>
+<meta name="description" content="Bell Forklift — Michigan's award-winning, family-owned Toyota material handling dealer since 1972. New & pre-owned forklifts, rentals, service, parts, tires, training and warehouse solutions.">
+<meta name="theme-color" content="#0b0b0c">
+<link rel="icon" href="assets/img/logo-white-2026.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="preload" as="image" href="assets/video/hero-poster.jpg">
+</head>
+<body>
+
+<!-- Shared SVG paint (gradients used by the forklift + props) -->
+<svg class="defs" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="gBody" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f02b34"/><stop offset=".5" stop-color="#d0141d"/><stop offset="1" stop-color="#8a0b12"/></linearGradient>
+    <linearGradient id="gHood" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff3a43"/><stop offset="1" stop-color="#c3111a"/></linearGradient>
+    <linearGradient id="gCw" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#50535b"/><stop offset="1" stop-color="#1b1c20"/></linearGradient>
+    <linearGradient id="gSteel" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#25272c"/><stop offset=".45" stop-color="#5d616a"/><stop offset="1" stop-color="#25272c"/></linearGradient>
+    <linearGradient id="gTank" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfbfc"/><stop offset=".45" stop-color="#c9cdd3"/><stop offset="1" stop-color="#7c828a"/></linearGradient>
+    <radialGradient id="gRim" cx=".4" cy=".35"><stop offset="0" stop-color="#eceef1"/><stop offset="1" stop-color="#868c95"/></radialGradient>
+    <linearGradient id="gBeam" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff4cf" stop-opacity=".7"/><stop offset="1" stop-color="#fff4cf" stop-opacity="0"/></linearGradient>
+    <radialGradient id="gAmber"><stop offset="0" stop-color="#ffd257" stop-opacity="1"/><stop offset=".35" stop-color="#ffb000" stop-opacity=".55"/><stop offset="1" stop-color="#ff9d00" stop-opacity="0"/></radialGradient>
+    <radialGradient id="gSpot"><stop offset="0" stop-color="#7cc4ff" stop-opacity="1"/><stop offset=".45" stop-color="#2f86ff" stop-opacity=".55"/><stop offset="1" stop-color="#2f86ff" stop-opacity="0"/></radialGradient>
+    <radialGradient id="gShadow"><stop offset="0" stop-color="#000" stop-opacity=".5"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+    <radialGradient id="gGlow"><stop offset="0" stop-color="#fff3c2" stop-opacity="1"/><stop offset=".4" stop-color="#ffb21a" stop-opacity=".55"/><stop offset="1" stop-color="#ff7a00" stop-opacity="0"/></radialGradient>
+    <linearGradient id="gWood" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9a868"/><stop offset="1" stop-color="#b98445"/></linearGradient>
+    <linearGradient id="gCard" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d2ad75"/><stop offset="1" stop-color="#b38952"/></linearGradient>
+    <linearGradient id="gDrum" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#123d86"/><stop offset=".4" stop-color="#2a6fe0"/><stop offset="1" stop-color="#0f2f6b"/></linearGradient>
+    <linearGradient id="gRack" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1e4fa3"/><stop offset=".5" stop-color="#3a78db"/><stop offset="1" stop-color="#1a4590"/></linearGradient>
+    <linearGradient id="gGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe7a1"/><stop offset=".5" stop-color="#d6a23a"/><stop offset="1" stop-color="#8f6418"/></linearGradient>
+    <pattern id="pHaz" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="14" height="14" fill="#141414"/><rect width="7" height="14" fill="#ffc21a"/></pattern>
+    <pattern id="pMesh" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="none"/><path d="M0 0H8M0 0V8" stroke="currentColor" stroke-width="1"/></pattern>
+  </defs>
+</svg>
+
+<!-- Preloader: a roll-up dock door -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-door"></div>
+  <div class="loader-inner">
+    <img src="assets/img/logo-white.webp" alt="" width="200" height="102">
+    <div class="loader-row">
+      <span class="mono">Warming up the fleet</span>
+      <span class="mono loader-count" id="loaderCount">000</span>
+    </div>
+    <div class="loader-bar"><i id="loaderBar"></i></div>
+  </div>
+</div>
+
+<!-- Navigation -->
+<header class="nav" id="nav">
+  <a class="nav-logo" href="#dock" data-jump="0" aria-label="Bell Forklift home">
+    <img src="assets/img/logo-white.webp" alt="Bell Forklift, Inc." width="116" height="59">
+  </a>
+  <nav class="nav-links" aria-label="Primary">
+    <a href="#equipment" data-jump="3">Equipment</a>
+    <a href="#equipment" data-jump="3" data-sub="2">Rentals</a>
+    <a href="#services" data-jump="4">Service</a>
+    <a href="#services" data-jump="4" data-sub="1">Parts</a>
+    <a href="#services" data-jump="4" data-sub="3">Training</a>
+    <a href="#services" data-jump="4" data-sub="4">Warehouse</a>
+    <a href="#about" data-jump="2">About</a>
+  </nav>
+  <div class="nav-right">
+    <a class="nav-phone" href="tel:+18884042575"><span class="dot"></span>1-888-404-2575</a>
+    <a class="btn btn-red btn-sm magnetic" href="#contact" data-jump="contact">Contact us</a>
+    <button class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i><i></i></button>
+  </div>
+</header>
+
+<div class="menu" id="menu" aria-hidden="true">
+  <div class="menu-inner">
+    <span class="mono menu-label">Select a level</span>
+    <a href="#dock" data-jump="0"><em>G</em>Home</a>
+    <a href="#offers" data-jump="1"><em>01</em>Your Choice Event</a>
+    <a href="#about" data-jump="2"><em>02</em>About Bell</a>
+    <a href="#equipment" data-jump="3"><em>03</em>Equipment &amp; Rentals</a>
+    <a href="#services" data-jump="4"><em>04</em>Service &amp; Parts</a>
+    <a href="#brands" data-jump="5"><em>05</em>Our Brands</a>
+    <a href="#contact" data-jump="contact"><em>06</em>Contact</a>
+    <a class="menu-call" href="tel:+18884042575">Call 1-888-404-2575</a>
+  </div>
+</div>
+
+<!-- Elevator call panel (desktop) -->
+<aside class="panel" id="panel" aria-label="Jump to a level">
+  <span class="mono panel-title">LVL</span>
+  <button data-jump="0" title="Dock">G</button>
+  <button data-jump="1" title="Your Choice Event">1</button>
+  <button data-jump="2" title="Since 1972">2</button>
+  <button data-jump="3" title="Equipment">3</button>
+  <button data-jump="4" title="Services">4</button>
+  <button data-jump="5" title="Brands">5</button>
+  <button data-jump="6" title="Value">6</button>
+  <button data-jump="7" title="End of shift">B</button>
+</aside>
+
+<div class="cursor" id="cursor" aria-hidden="true"><span></span></div>
+
+<main id="main">
+
+  <!-- LEVEL G — HERO / DOCK -->
+  <section class="level dark lv-hero" id="dock" data-len="210" data-code="G" data-name="Loading dock">
+    <div class="stage">
+      <div class="hero-media" id="heroMedia">
+        <video id="heroVideo" autoplay muted loop playsinline preload="auto" poster="assets/video/hero-poster.jpg">
+          <source src="assets/video/hero.webm" type="video/webm">
+          <source src="assets/video/hero.mp4" type="video/mp4">
+        </video>
+        <div class="hero-shade"></div>
+        <div class="grain"></div>
+      </div>
+      <div class="ceil hero-ceil" id="heroCeil">
+        <p class="eyebrow reveal"><span class="pip"></span>Award-winning Toyota material handling dealer</p>
+        <h1 class="hero-title" aria-label="Michigan moves on Bell.">
+          <span class="line"><span class="split">Michigan</span></span>
+          <span class="line"><span class="split">moves on</span></span>
+          <span class="line"><span class="split red">Bell.</span></span>
+        </h1>
+        <div class="hero-row">
+          <p class="hero-sub reveal" style="--d:.5s">New &amp; pre-owned forklifts, rentals, service, parts, tires and operator training — from the family-owned team that has kept Michigan lifting since 1972.</p>
+          <div class="hero-ctas reveal" style="--d:.65s">
+            <a class="btn btn-red magnetic" href="#contact" data-jump="contact">Get started <b class="arr">→</b></a>
+            <a class="btn btn-glass magnetic" href="tel:+18884042575">Call 888-404-2575</a>
+            <button class="btn btn-ghost magnetic" id="watchBtn"><span class="play"></span>Watch video</button>
+          </div>
+        </div>
+      </div>
+      <ul class="hero-meta mono reveal" style="--d:.8s">
+        <li><b>Est.</b> 1972</li>
+        <li><b>5</b> Michigan locations</li>
+        <li><b>ASEC</b> certified service</li>
+      </ul>
+      <div class="scroll-cue mono" id="scrollCue"><span>Scroll to drive</span><i></i></div>
+      <div class="props"></div>
+      <div class="floor"><span class="stencil">G · Loading dock</span></div>
+    </div>
+  </section>
+
+  <!-- LEVEL 1 — YOUR CHOICE SALES EVENT -->
+  <section class="level dark lv-offers" id="offers" data-len="330" data-code="1" data-name="Your Choice Event">
+    <div class="stage">
+      <div class="bg-glow"></div>
+      <div class="ceil">
+        <div class="offers-head">
+          <p class="eyebrow reveal"><span class="pip"></span>Your Choice Sales Event · Valid until Dec 31, 2026</p>
+          <h2 class="mega"><span class="split">Your</span> <span class="split red">choice.</span></h2>
+          <p class="lede reveal" style="--d:.3s">Choose your equipment promotion — a factory rebate or a discounted finance rate. Your call.</p>
+        </div>
+        <div class="offers" id="offers-cards">
+          <article class="offer" data-burst="0">
+            <span class="mono">Option A · Factory rebate</span>
+            <p class="offer-small">Up to</p>
+            <p class="offer-big"><span class="count" data-to="2500" data-pre="$" data-fmt="comma">$2,500</span></p>
+            <p class="offer-desc">Rebate with trade-in</p>
+          </article>
+          <div class="offer-or" data-burst="1"><span>or</span></div>
+          <article class="offer offer-alt" data-burst="2">
+            <span class="mono">Option B · Finance rate</span>
+            <p class="offer-small">As low as</p>
+            <p class="offer-big"><span class="count" data-to="4.99" data-dec="2" data-post="%">4.99%</span></p>
+            <p class="offer-desc">24–60 month terms · no trade-in required</p>
+          </article>
+          <div class="offer-cta" data-burst="3">
+            <a class="btn btn-red magnetic" href="#contact" data-jump="contact">Request a quote <b class="arr">→</b></a>
+            <a class="link-arrow" href="#equipment" data-jump="3">View Toyota product line</a>
+            <p class="fine">Select Class 1, 2, 3, 4 and 5 models only. Certain conditions apply. Rebates are issued in local currency. Promotional rates require financing through Toyota Industries Commercial Finance. Contact a Bell Forklift representative for full details.</p>
+          </div>
+        </div>
+      </div>
+      <div class="props"></div>
+      <div class="floor"><span class="stencil">L1 · Promotions bay</span></div>
+    </div>
+  </section>
+
+  <!-- LEVEL 2 — SINCE 1972 -->
+  <section class="level light lv-about" id="about" data-len="440" data-code="2" data-name="Since 1972">
+    <div class="stage">
+      <div class="year-ghost" aria-hidden="true">1972</div>
+      <div class="ceil about-grid">
+        <div class="about-copy">
+          <p class="eyebrow reveal"><span class="pip"></span>Family owned &amp; operated</p>
+          <h2 class="h2"><span class="split">Exceeding expectations since</span> <span class="split red">1972.</span></h2>
+          <p class="lede reveal" style="--d:.3s">Wayne Bell founded Bell Forklift in 1972 with one goal: meet and exceed every customer's needs with innovative, cost-effective material handling. More than 50 years later we're still family-owned — and every technician and salesperson is factory trained.</p>
+          <a class="link-arrow reveal" style="--d:.45s" href="#contact" data-jump="contact">Learn more about Bell</a>
+        </div>
+        <figure class="about-photo reveal" style="--d:.2s">
+          <img src="assets/img/family.webp" alt="The Bell family and team in the Bell Forklift showroom" loading="lazy" width="555" height="370">
+          <figcaption class="mono">The Bell family &amp; team</figcaption>
+        </figure>
+        <ol class="stats" id="stats">
+          <li data-i="0"><b class="count" data-to="1972" data-plain>1972</b><span>Founded by Wayne Bell</span></li>
+          <li data-i="1"><b><span class="count" data-to="50">50</span>+</b><span>Years family-owned</span></li>
+          <li data-i="2"><b class="count" data-to="5">5</b><span>Locations serving Michigan</span></li>
+          <li data-i="3"><b><span class="count" data-to="100">100</span>%</b><span>Factory-trained techs &amp; sales</span></li>
+        </ol>
+      </div>
+      <div class="props"></div>
+      <div class="floor"><span class="stencil">L2 · Stacking zone</span></div>
+    </div>
+  </section>
+
+  <!-- LEVEL 3 — EQUIPMENT (horizontal aisle) -->
+  <section class="level dark lv-equip" id="equipment" data-len="520" data-code="3" data-name="Equipment">
+    <div class="stage">
+      <div class="aisle-lights" aria-hidden="true"></div>
+      <div class="ceil equip-head">
+        <p class="eyebrow reveal"><span class="pip"></span>Quality equipment</p>
+        <h2 class="h2"><span class="split">Everything</span> <span class="split red">that lifts.</span></h2>
+        <div class="equip-progress mono"><span id="equipIdx">01</span> / 03<i><b id="equipBar"></b></i></div>
+      </div>
+      <div class="track" id="track">
+        <article class="bay" data-k="0">
+          <div class="bay-img"><img src="assets/img/new-equipment.webp" alt="New Toyota forklifts lined up in the Bell showroom" loading="lazy" width="700" height="394"></div>
+          <div class="bay-txt">
+            <span class="mono">01 · New</span>
+            <h3>New equipment</h3>
+            <p>Shop Toyota-backed new forklifts and material handling equipment, sized and configured for your operation.</p>
+            <a class="link-arrow" href="#contact" data-jump="contact">Explore new equipment</a>
+          </div>
+        </article>
+        <article class="bay" data-k="1">
+          <div class="bay-img"><img src="assets/img/pre-owned.webp" alt="Technician detailing a pre-owned forklift" loading="lazy" width="700" height="394"></div>
+          <div class="bay-txt">
+            <span class="mono">02 · Pre-owned</span>
+            <h3>Pre-owned equipment</h3>
+            <p>Quality used forklift trucks at great prices — hundreds of units in stock, including Toyota, the #1 selling forklift and industry leader.</p>
+            <a class="link-arrow" href="#contact" data-jump="contact">Browse pre-owned</a>
+          </div>
+        </article>
+        <article class="bay" data-k="2">
+          <div class="bay-img"><img src="assets/img/rentals.webp" alt="Rows of Toyota rental forklifts ready to ship" loading="lazy" width="700" height="394"></div>
+          <div class="bay-txt">
+            <span class="mono">03 · Rentals</span>
+            <h3>Rentals</h3>
+            <p>No matter the job, our rental fleet is built on an award-winning quality and service record that's second to none.</p>
+            <a class="link-arrow" href="#contact" data-jump="contact">Rent equipment</a>
+          </div>
+        </article>
+        <div class="props track-props"></div>
+      </div>
+      <div class="props"></div>
+      <div class="floor"><span class="stencil">L3 · Aisle 03 — Put-away</span></div>
+    </div>
+  </section>
+
+  <!-- LEVEL 4 — SERVICES -->
+  <section class="level light lv-services" id="services" data-len="640" data-code="4" data-name="Services">
+    <div class="stage">
+      <div class="ceil svc-grid">
+        <div class="svc-left">
+          <p class="eyebrow reveal"><span class="pip"></span>More than a forklift dealership</p>
+          <ol class="svc-list" id="svcList">
+            <li class="on"><span class="mono">01</span>Service</li>
+            <li><span class="mono">02</span>Parts</li>
+            <li><span class="mono">03</span>Tires</li>
+            <li><span class="mono">04</span>Training</li>
+            <li><span class="mono">05</span>Warehouse solutions</li>
+          </ol>
+        </div>
+        <div class="svc-card reveal" style="--d:.2s">
+          <div class="svc-imgs">
+            <img class="on" src="assets/img/service.webp" alt="Bell service van in the shop" loading="lazy" width="512" height="288">
+            <img src="assets/img/parts.webp" alt="Radiators and genuine parts on a tool chest" loading="lazy" width="512" height="288">
+            <img src="assets/img/tires.webp" alt="Bell tire press in the shop" loading="lazy" width="512" height="288">
+            <img src="assets/img/training.webp" alt="Operators in a forklift training class" loading="lazy" width="512" height="288">
+            <img src="assets/img/warehouse.webp" alt="Warehouse racking with a forklift in the aisle" loading="lazy" width="512" height="288">
+          </div>
+          <div class="svc-desc" id="svcDesc">
+            <p class="on">Factory-trained technicians keep your fleet running — in our shop or at your site.</p>
+            <p>A fulfillment center stocked with genuine, factory-certified parts for forklifts and material handling equipment.</p>
+            <p>New tires pressed and installed so your fleet keeps its grip — and its uptime.</p>
+            <p>Operator training that builds safer, more confident, certified drivers.</p>
+            <p>Racking, layout and storage solutions designed around how your warehouse really moves.</p>
+          </div>
+          <a class="link-arrow" href="#contact" data-jump="contact">Talk to our service team</a>
+        </div>
+      </div>
+      <div class="props"></div>
+      <div class="floor"><span class="stencil">L4 · Service bay</span></div>
+    </div>
+  </section>
+
+  <!-- LEVEL 5 — BRANDS / SHIPPING DOCK -->
+  <section class="level dark lv-brands" id="brands" data-len="420" data-code="5" data-name="Brands">
+    <div class="stage">
+      <div class="ceil brands-head">
+        <div>
+          <p class="eyebrow reveal"><span class="pip"></span>Major brands</p>
+          <h2 class="h2"><span class="split">Only the best</span> <span class="split red">manufacturers.</span></h2>
+        </div>
+        <p class="lede reveal" style="--d:.3s">From 3,000 lb. forklifts to 100,000 lb. capacity — from scissor lifts to telehandlers — our showroom gives Eastern Michigan real choice, not a single-brand lineup.</p>
+      </div>
+      <div class="marquee" aria-label="Brands we carry">
+        <div class="marquee-row">
+          <div class="chip"><img src="assets/logos/toyota-mh.webp" alt="Toyota Material Handling"></div>
+          <div class="chip"><img src="assets/logos/aichi.webp" alt="Aichi"></div>
+          <div class="chip"><img src="assets/logos/genie.webp" alt="Genie"></div>
+          <div class="chip"><img src="assets/logos/columbia.webp" alt="Columbia"></div>
+          <div class="chip"><img src="assets/logos/snorkel.webp" alt="Snorkel Xtreme"></div>
+          <div class="chip"><img src="assets/logos/tennant.webp" alt="Tennant"></div>
+          <div class="chip"><img src="assets/logos/mariotti.webp" alt="V. Mariotti"></div>
+        </div>
+      </div>
+      <div class="props"></div>
+      <div class="floor"><span class="stencil">L5 · Shipping — Dock 05</span></div>
+    </div>
+  </section>
+
+  <!-- LEVEL 6 — VALUE / ASEC -->
+  <section class="level light lv-value" id="value" data-len="340" data-code="6" data-name="Top value">
+    <div class="stage">
+      <div class="ceil value-grid">
+        <div>
+          <p class="eyebrow reveal"><span class="pip"></span>Top value for the money</p>
+          <h2 class="h2"><span class="split">Award-winning service.</span> <span class="split red">Genuine parts.</span></h2>
+          <p class="lede reveal" style="--d:.3s">Bell picks Toyota genuine, factory-certified parts to keep your forklifts operational as long as possible — and has earned Toyota's After Sales Service Evaluation &amp; Certification (ASEC).</p>
+          <div class="badges reveal" style="--d:.45s">
+            <span class="badge"><img src="assets/logos/asec.webp" alt="ASEC — After Sales Service Evaluation & Certification"></span>
+            <span class="badge"><img src="assets/logos/mheda.webp" alt="MHEDA member"></span>
+          </div>
+        </div>
+        <a class="specialist magnetic reveal" style="--d:.2s" href="#contact" data-jump="contact">
+          <span class="mono">Get in touch for sales &amp; service</span>
+          <strong>Find your Bell specialist</strong>
+          <b class="arr">→</b>
+        </a>
+      </div>
+      <div class="props"></div>
+      <div class="floor"><span class="stencil">L6 · Awards</span></div>
+    </div>
+  </section>
+
+  <!-- CONTACT (normal flow) -->
+  <section class="contact" id="contact">
+    <div class="contact-grid">
+      <div class="contact-copy">
+        <p class="eyebrow reveal"><span class="pip"></span>Get in touch</p>
+        <h2 class="mega"><span class="split">Let's move</span> <span class="split red">something.</span></h2>
+        <p class="lede reveal">For sales &amp; service of new or used equipment, parts, rentals, tires, training and warehouse solutions.</p>
+        <a class="phone-big reveal" href="tel:+18884042575">1-888-404-2575</a>
+        <ul class="contact-list mono reveal">
+          <li>5 convenient locations serving Michigan</li>
+          <li>Family owned &amp; operated since 1972</li>
+          <li>Award-winning Toyota dealer</li>
+        </ul>
+      </div>
+      <form class="form reveal" id="form" novalidate>
+        <div class="form-head mono"><span>Work order</span><span id="woNum">WO-00000</span></div>
+        <div class="fgrid">
+          <label><span>Name*</span><input name="name" required autocomplete="name"></label>
+          <label><span>Title</span><input name="title" autocomplete="organization-title"></label>
+          <label><span>Email*</span><input name="email" type="email" required autocomplete="email"></label>
+          <label><span>Phone*</span><input name="phone" type="tel" required autocomplete="tel"></label>
+          <label><span>Company*</span><input name="company" required autocomplete="organization"></label>
+          <label><span>City</span><input name="city" autocomplete="address-level2"></label>
+          <label class="full"><span>Department*</span>
+            <div class="chips" role="radiogroup" aria-label="Department">
+              <input type="radio" name="dept" id="d1" value="New/Used Equipment" checked><label for="d1">Equipment</label>
+              <input type="radio" name="dept" id="d2" value="Rentals"><label for="d2">Rentals</label>
+              <input type="radio" name="dept" id="d3" value="Service"><label for="d3">Service</label>
+              <input type="radio" name="dept" id="d4" value="Parts"><label for="d4">Parts</label>
+              <input type="radio" name="dept" id="d5" value="Tires"><label for="d5">Tires</label>
+              <input type="radio" name="dept" id="d6" value="Training"><label for="d6">Training</label>
+              <input type="radio" name="dept" id="d7" value="Warehouse Solutions"><label for="d7">Warehouse</label>
+            </div>
+          </label>
+          <label class="full"><span>What can we help you with?*</span><textarea name="msg" rows="3" required></textarea></label>
+        </div>
+        <button class="btn btn-red btn-wide magnetic" type="submit">Send us your message <b class="arr">→</b></button>
+        <p class="form-ok mono" id="formOk" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- LEVEL B — END OF SHIFT / FOOTER -->
+  <footer class="level dark lv-footer" id="shift" data-len="190" data-code="B" data-name="End of shift">
+    <div class="stage">
+      <div class="ceil foot-grid">
+        <div class="foot-brand">
+          <p class="eyebrow"><span class="pip"></span>End of shift</p>
+          <h2 class="h2">Parked, plugged in <span class="red">&amp; ready for tomorrow.</span></h2>
+          <a class="phone-big sm" href="tel:+18884042575">1-888-404-2575</a>
+        </div>
+        <nav class="foot-cols" aria-label="Footer">
+          <div><span class="mono">Equipment</span><a href="#equipment" data-jump="3">New equipment</a><a href="#equipment" data-jump="3">Pre-owned</a><a href="#equipment" data-jump="3">Rentals</a><a href="#offers" data-jump="1">Current offers</a></div>
+          <div><span class="mono">Services</span><a href="#services" data-jump="4">Service</a><a href="#services" data-jump="4">Parts</a><a href="#services" data-jump="4">Tires</a><a href="#services" data-jump="4">Training</a><a href="#services" data-jump="4">Warehouse solutions</a></div>
+          <div><span class="mono">Company</span><a href="#about" data-jump="2">About Bell</a><a href="#contact" data-jump="contact">Careers</a><a href="#contact" data-jump="contact">Contact</a></div>
+        </nav>
+      </div>
+      <div class="wordmark" aria-hidden="true">BELL</div>
+      <div class="foot-legal mono"><span>© 2026 Bell Forklift, Inc. · Family owned since 1972</span><span>5 locations serving Michigan</span></div>
+      <div class="props"></div>
+      <div class="floor"><span class="stencil">B · Charging bay</span></div>
+    </div>
+  </footer>
+</main>
+
+<!-- The rig: one forklift that drives the whole page -->
+<div id="rig" aria-hidden="true">
+  <svg class="cables" id="cables"><line id="cab1"/><line id="cab2"/></svg>
+  <div class="cage cage-back" id="cageBack"></div>
+  <div class="fl-wrap" id="flWrap"></div>
+  <div class="cage cage-front" id="cageFront"></div>
+  <div class="fx" id="fx"></div>
+  <div class="fl-tag" id="flTag"><span></span></div>
+</div>
+
+<div class="hud mono" id="hud" aria-hidden="true">
+  <span><i>LVL</i><b id="hudLvl">G</b></span>
+  <span><i>LIFT</i><b id="hudLift">0000</b>mm</span>
+  <span><i>LOAD</i><b id="hudLoad">0</b>lb</span>
+  <span><i>SPD</i><b id="hudSpd">0.0</b>mph</span>
+</div>
+
+<div class="modal" id="videoModal" role="dialog" aria-modal="true" aria-label="Bell Forklift video" hidden>
+  <button class="modal-close" id="modalClose" aria-label="Close video">×</button>
+  <video id="modalVideo" controls playsinline preload="none" poster="assets/video/hero-poster.jpg">
+    <source src="assets/video/hero.webm" type="video/webm">
+    <source src="assets/video/hero.mp4" type="video/mp4">
+  </video>
+</div>
+
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="js/art.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
